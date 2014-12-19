@@ -17,17 +17,17 @@ import com.opensymphony.xwork2.ActionSupport;
 @ResultPath(value = "/")
 public class FindAllEmployeesAction extends ActionSupport{
 
-	public EmployeeMem empl;
+	public EmployeeMem emp;
 	public List<EmployeeMem> e = new ArrayList<EmployeeMem>();
 	@Autowired
     FindAllEmployeesService empService;
 
-	public void setEmr(EmployeeMem empl) {
-		this.empl = empl;
+	public void setEmp(EmployeeMem emp) {
+		this.emp = emp;
 	}
 
-	public EmployeeMem getEmr() {
-		return this.empl;
+	public EmployeeMem getEmp() {
+		return this.emp;
 	}
 	
 

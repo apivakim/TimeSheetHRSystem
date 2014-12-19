@@ -20,6 +20,10 @@ public class DeleteEmpAction extends ActionSupport{
     private int id;
     private EmployeeMem employeeMem;
 
+    public void setDeleteEmpSevice(DeleteEmpSevice deleteEmpSevice) {
+        this.deleteEmpSevice = deleteEmpSevice;
+    }
+
     public int getId() {
         return id;
     }

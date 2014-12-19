@@ -11,6 +11,20 @@
 <title>Insert title here</title>
 <sj:head />
 <sb:head />
+
+
+			<script type="text/javascript">
+				    function actionupdate(){
+						document.forms[0].action = "updateemp";
+			            document.forms[0].submit();
+						}
+
+					function list(){
+						document.forms[0].action = "showallemp";
+			            document.forms[0].submit();
+						}
+			</script>
+
 </head>
 <body>
 
@@ -93,10 +107,10 @@
 				
 				<fieldset>
 				<legend> </legend>
- 				<div align="center"> 
-	                	<s:submit cssClass="btn"/>  
-	                	<s:reset  cssClass="btn"></s:reset>
-	            </div>
+ 			    <div align="center">
+            				     <button cssClass="btn" type="submit" onclick="actionupdate()">Update</button>
+            				     <button cssClass="btn" onclick="list()">Cancle</button>
+            	</div>
 	            </fieldset>
    </s:form>
 </body>

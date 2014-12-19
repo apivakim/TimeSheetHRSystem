@@ -27,7 +27,7 @@ public class RegisterService {
 
 
 	public  boolean isRegister(EmployeeforRegister emr) {
-		if((emr.getUser().isEmpty()&&emr.getEmail().isEmpty())||(emr.getPassword().isEmpty())){		
+		if((emr.getUser()==null&&emr.getEmail()==null)||(emr.getPassword()==null)){
 			return false;
 		}else{
 			redaoimlp.saveReg(emr);

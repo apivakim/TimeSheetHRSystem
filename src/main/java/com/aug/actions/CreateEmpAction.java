@@ -18,8 +18,12 @@ public class CreateEmpAction extends ActionSupport{
 	
 	@Autowired
 	CreateEmpService createEmpService;
-	
 
+
+
+	public void setCreateEmpService(CreateEmpService createEmpService) {
+		this.createEmpService = createEmpService;
+	}
 
 	public EmployeeMem getEm() {
 		return em;
@@ -32,13 +36,13 @@ public class CreateEmpAction extends ActionSupport{
 
 
 	@Action(value = "createemp", results = {
-			@Result(name = "success", location = "pages/insertemp.jsp"),
-			@Result(name = "failuer", location = "initemp") })
+			@Result(name = "success",type="redirect", location = "showallemp"),
+			@Result(name = "failuer",type="redirect", location = "initemp") })
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		if(createEmpService.createEmp(em)==true){
-		addActionMessage("Create Success");
+		//addActionMessage("Create Success");
 		return  SUCCESS;
 		}else{
 			//System.out.println(e.getCritizenid());

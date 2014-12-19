@@ -1,6 +1,7 @@
 package com.aug.actions;
 
 import com.aug.entities.EmployeeMem;
+import com.aug.services.CreateEmpService;
 import com.aug.services.UpdateEmployeesService;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.convention.annotation.Action;
@@ -20,9 +21,12 @@ public class UpdateEmpAction extends ActionSupport{
 
 
 
-
     private int id;
     private EmployeeMem emp;
+
+    public void setUpdateservice(UpdateEmployeesService updateservice) {
+        this.updateservice = updateservice;
+    }
 
     public int getId() {
         return id;
@@ -46,7 +50,9 @@ public class UpdateEmpAction extends ActionSupport{
     @Override
     public String execute() throws Exception {
         // TODO Auto-generated method stub
-        EmployeeMem empmem = updateservice.getId(emp.getId());
+
+        EmployeeMem empmem  = updateservice.getId(emp.getId());
+        System.out.println(emp.getId());
         empmem.setIdcard(this.emp.getIdcard());
         empmem.setName(this.emp.getName());
         empmem.setSurname(this.emp.getSurname());
@@ -67,6 +73,7 @@ public class UpdateEmpAction extends ActionSupport{
     @Action(value = "initupdateemp", results = { @Result(name = "input", location = "pages/updateemp.jsp") })
     public String init() throws Exception {
         emp=updateservice.getId(id);
+        System.out.println(id);
         return INPUT;
     }
 }

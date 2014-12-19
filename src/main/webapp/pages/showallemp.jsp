@@ -19,24 +19,30 @@
 	  label="Employees">
 		 <div align="center">
 
-				<div class="row" align="center">
-				<div class="col-xs-1"><label>no</label></div>
-		 		<div class="col-xs-1"><label>idcard</label></div>
-                <div class="col-xs-1"><label>name</label></div>
-                <div class="col-xs-1"><label>surname</label></div>
-                <div class="col-xs-1"><label>mobile</label></div>
-                <div class="col-xs-2"><label>email</label></div>
+				<div class="row">
+				<div class="col-xs-1"><label>No</label></div>
+		 		<div class="col-xs-1"><label>Idcard</label></div>
+		 		<div class="col-xs-1"><label>Gender</label></div>
+                <div class="col-xs-1"><label>Name</label></div>
+                <div class="col-xs-1"><label>Surname</label></div>
+                <div class="col-xs-1"><label>Date of Birth</label></div>
+                 <div class="col-xs-1"><label>Address</label></div>
+                <div class="col-xs-1"><label>Mobile</label></div>
+                <div class="col-xs-2"><label>Email</label></div>
 				</div>
 
 				<s:iterator value="e" status="eStatus">
-				<div class="row" align="center">
+				<div class="row">
 					<div class="col-xs-1"><s:property value="#eStatus.index+1"/></div>
 					<div class="col-xs-1"><s:property value="idcard"/></div>
+					<div class="col-xs-1"><s:property value="gender"/></div>
 					<div class="col-xs-1"><s:property value="name"/></div>
 					<div class="col-xs-1"><s:property value="surname"/></div>
+					<div class="col-xs-1"><s:property value="dateofbirth"/></div>
+					<div class="col-xs-1"><s:property value="address"/></div>
 					<div class="col-xs-1"><s:property value="mobile"/></div>
 					<div class="col-xs-2"><s:property value="email"/></div>
-					<div class="col-xs-1"><a href="initupdateemp?id=<s:property value="id"/>">edit</a></div>
+					<div class="col-xs-1" align="center"><a href="initupdateemp?id=<s:property value="id"/>">edit</a></div>
 					<div class="col-xs-1"><a href="deleteemp?id=<s:property value="id"/>">delete</a></div>
 				</div>
 				</s:iterator>

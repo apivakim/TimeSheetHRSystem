@@ -18,6 +18,14 @@ public class RegisterAction extends ActionSupport {
 	@Autowired
 	RegisterService res;
 
+	public RegisterService getRes() {
+		return res;
+	}
+
+	public void setRes(RegisterService res) {
+		this.res = res;
+	}
+
 	public void setEmr(EmployeeforRegister emr) {
 		this.emr = emr;
 	}
