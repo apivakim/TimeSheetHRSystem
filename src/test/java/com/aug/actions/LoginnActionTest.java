@@ -31,7 +31,7 @@ public class LoginnActionTest {
 		
 		
 		@Test
-		public void loginSuccessShouldRedirectToWelcomePage() throws Exception {
+		public void loginSuccessShouldRedirectToHomePage() throws Exception {
 			EmployeeforRegister employee = new EmployeeforRegister();
 			employee.setEmail("test@test.com");
 			loginnAction.setEm(employee);
@@ -42,7 +42,7 @@ public class LoginnActionTest {
 		
 		
 		@Test
-		public void loginNotSuccessShouldNotRedirectToWelcomePage() throws Exception {
+		public void loginNotSuccessShouldNotRedirectToHomePage() throws Exception {
 		
 			when(mockLoginService.isLogin(any(EmployeeforRegister.class))).thenReturn(false);
 	        assertThat(loginnAction.execute(), is(equalTo("failuer")));

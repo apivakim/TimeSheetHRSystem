@@ -44,7 +44,7 @@ public class DeleteEmpActionTest {
 
 
     @Test
-    public void updateSuccessShouldRedirectToOtherPage() throws Exception {
+    public void deleteSuccessShouldRedirectToOtherPage() throws Exception {
         mockCreateEmpDao.saveEmployees(employeeMem);
         when(mockdeleteEmpSevice.getByIdDelete(employeeMem.getId())).thenReturn(employeeMem);
         mockdeleteEmpSevice.deleteEmp(employeeMem);

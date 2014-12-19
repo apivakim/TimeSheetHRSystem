@@ -33,13 +33,13 @@ public class CreateEmpActionTest {
     }
 
     @Test
-    public void loginFailuerShouldRedirectToOtherPage() throws Exception {
+    public void loginFailuerShouldRedirectToLoginPage() throws Exception {
         when(mockcreateEmpService.createEmp(any(EmployeeMem.class))).thenReturn(false);
         assertThat(empAction.execute(), is(equalTo("failuer")));
     }
 
     @Test
-    public void loginSuccessShouldRedirectToWelcomePage() throws Exception {
+    public void loginSuccessShouldRedirectToHomePage() throws Exception {
         EmployeeMem employeeMem = new EmployeeMem();
         employeeMem.setName("apiva");
         empAction.setEm(employeeMem);

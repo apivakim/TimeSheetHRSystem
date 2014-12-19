@@ -38,7 +38,7 @@ public class DeleteEmpServiceTest {
     }
 
     @Test
-    public void shouldBeTrueWhenUpdateCorrect() {
+    public void shouldBeDeleteSuccess() {
         EmployeeMem e = new EmployeeMem();
         deleteEmpSevice.deleteEmp(e);
         verify(deleteEmpDao, times(1)).deleteEmp(e);
