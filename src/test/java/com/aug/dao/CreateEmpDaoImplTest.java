@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import static org.junit.Assert.*;
 
 /**
  * Created by littleTearsCoder on 12/17/2014.
@@ -31,6 +32,7 @@ public class CreateEmpDaoImplTest {
     @Test
     public void shouldInsertDataIntoDB(){
         createEmpDao.saveEmployees(employeeMem);
+        assertNotNull(employeeMem.getId());
     }
 
 }

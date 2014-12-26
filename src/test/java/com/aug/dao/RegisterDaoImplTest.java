@@ -12,6 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.*;
 
 /**
  * Created by littleTearsCoder on 12/17/2014.
@@ -40,6 +41,8 @@ public class RegisterDaoImplTest {
     public void shouldInsertDataIntoDB(){
         System.out.println(employee.getUser());
         registerDao.saveReg(employee);
+        assertNotNull(employee.getId());
+
     }
 
 
